@@ -1,0 +1,341 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style type="text/css">
+
+/* Default styles */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+.wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: url(bg2.jpg);
+    width: 100%;
+    height: 100vh;
+    background-position-x: center;
+ background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Keyframes for background animation */
+
+
+/* Keyframes for span animation */
+
+span {
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    animation: animated 3s linear infinite;
+}
+
+/* Additional styles for span */
+
+span::before {
+    content: '';
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    width: 150px;
+    height: 1px;
+    background: linear-gradient(90deg, #fff, transparent);
+}
+
+/* Keyframes for span animation */
+
+@keyframes animated {
+    0% {
+        transform: rotate(315deg) translateX(0);
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(315deg) translateX(-1000px);
+        opacity: 0;
+    }
+}
+
+/* Span positions for different screen sizes */
+
+span:nth-child(1) {
+    top: 0;
+    left: initial;
+    right: 0;
+    animation-delay: 0;
+    animation-duration: 1s;
+}
+
+span:nth-child(2) {
+    top: 0;
+    left: initial;
+    right: 80px;
+    animation-delay: 0.2s;
+    animation-duration: 3s;
+}
+
+span:nth-child(3) {
+    top: 80px;
+    left: initial;
+    right: 0;
+    animation-delay: 0.4s;
+    animation-duration: 2s;
+}
+
+span:nth-child(4) {
+    top: 0px;
+    left: initial;
+    right: 180px;
+    animation-delay: 0.6s;
+    animation-duration: 1.5s;
+}
+
+span:nth-child(5) {
+    top: 0px;
+    left: initial;
+    right: 400px;
+    animation-delay: 0.8s;
+    animation-duration: 2.5s;
+}
+
+span:nth-child(6) {
+    top: 0px;
+    left: initial;
+    right: 600px;
+    animation-delay: 1s;
+    animation-duration: 3s;
+}
+
+span:nth-child(7) {
+    top: 0px;
+    left: initial;
+    right: 700px;
+    animation-delay: 1.4s;
+    animation-duration: 1.25s;
+}
+
+.container {
+    width: 100%;
+    max-width: 310px;
+    margin: auto;
+}
+
+.content {
+    text-align: center;
+    margin-top: 150px;
+}
+
+/* Additional styles for the text section */
+
+.text {
+    text-align: center;
+    color: #fff;
+}
+
+.text h1 {
+    font-size: 3em;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.text h4 {
+    font-size: 2em;
+    margin-top: 5px;
+    color: #FFFF00;
+    font-weight: 800;
+}
+@keyframes rotate {
+      
+     0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateX(-10px);
+      }
+}
+
+ .text .mark{
+      display: inline-block;
+      font-size: 3em;
+      animation: rotate 2s infinite linear;
+    color:white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius:100%;
+   margin-bottom: 20px;
+    }
+
+
+
+.text .yellow {
+    color: #FFFF00;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+.color{
+color: #FFFF00;
+
+}
+
+
+
+.text p {
+    font-size: 13px;
+    margin-bottom: 35px;
+}
+
+/* Link styles */
+
+.link {
+    margin-top: 30px;
+}
+
+.link a {
+    color: #323299;
+    background: #FFFF00;
+    text-decoration: none;
+    padding: 4px 10px;
+    text-transform: capitalize;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.link a:hover {
+    color: #323299;
+    background: #fff;
+}
+
+.link a.active {
+    color: #323299;
+    background: #fff;
+    animation: fadeIn 3s ease-in-out infinite;
+}
+
+/* Keyframes for fadeIn animation */
+
+@keyframes fadeIn {
+    0%, 100% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Media queries for responsiveness */
+
+@media only screen and (min-width: 400px) {
+    /* Add styles for screens wider than 400px */
+    body {
+        overflow: visible;
+    }
+
+    .wrapper {
+        background-size: contain;
+    }
+
+    .container {
+        max-width: 600px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    /* Add styles for screens wider than 600px */
+    .content {
+        margin-top: 100px;
+    }
+
+    .text h1 {
+        font-size: 4em;
+    }
+
+    .text h4 {
+        font-size: 2.5em;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    /* Add styles for screens wider than 800px */
+    .text h1 {
+        font-size: 5em;
+    }
+
+    .text h4 {
+        font-size: 3em;
+    }
+}
+
+@media only screen and (min-width: 1080px) {
+    /* Add styles for screens wider than 1080px */
+    .wrapper {
+        animation: none; /* Remove background animation for larger screens */
+    }
+}
+
+
+
+</style>
+    <title>404 Error</title>
+</head>
+
+<body>
+<div class="wrapper">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<div class="container" >
+<div class="content" >
+<div class="text">
+<i class="fa fa-question-circle mark"></i>
+<h1><label class="color" >oo</label>ps!</h1>
+<h4>  Error 404      </h4>
+<p class="yellow" >We are sorry the page you requested could not be found
+</p>
+<p>But don't worry, with our advanced search engine you can find what you are looking for
+</p></div>
+
+
+<div class="link">
+
+<a href="" > Home </a>
+
+</div>
+</div>
+
+
+</div>
+
+
+
+
+</body>
+
+</html>
